@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vizualizare Date</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Vizualizare Baza de Date</h1>
+
+        <div class="controls">
+            <select id="tableSelect">
+                <option value="">Select a tabel</option>
+            </select>
+            <button id="addRecordBtn" class="action-button">Add Record</button>
+        </div>
+        <!-- Add Record Modal -->
+        <div id="addRecordModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Add Record</h2>
+                <form id="addRecordForm">
+                    <div id="formFields"></div>
+                    <div class="form-buttons">
+                        <button type="submit">Add</button>
+                        <button type="button" class="cancel">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="controls">
+            <label for="querySelect">Selectati o interogare:</label>
+            <select id="querySelect">
+                <option value="">Selectati interogarea</option>
+            </select>
+
+            <label for="queryParam">Introduceti parametru:</label>
+            <input type="text" id="queryParam" placeholder="Ex: Nume competitie, Data..." />
+
+            <button id="runQueryBtn" class="action-button">Run Query</button>
+        </div>
+        <div id="tableContainer">
+            <table id="dataTable">
+                <thead>
+                    <tr id="headerRow"></tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
